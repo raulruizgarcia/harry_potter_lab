@@ -1,7 +1,7 @@
 <h1>Details for student: <%=@student.id %></h1>
 
 <p>Student name: <%=  "#{@student.first_name} #{@student.second_name}" %></p>
-<p>House: <%=  "#{@student.house}" %></p>
+<p>House: <%=  "#{@student.house.name}" %></p>
 <p>Age: <%=  "#{@student.age}" %></p>
 
 <p><a href="/hogwarts">Click here to go back to the student list</a></p>

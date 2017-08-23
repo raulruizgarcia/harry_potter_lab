@@ -1,8 +1,9 @@
 require 'sinatra'
 require 'sinatra/contrib/all' if development?
 require_relative './models/student'
+require_relative './models/house'
 
-also_reload 'models/student'
+also_reload 'models/student/*'
 
 get '/hogwarts' do
   @students = Student.all

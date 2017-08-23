@@ -5,7 +5,7 @@
  student</a></p>
 
   <p>Student name: <%=  "#{student.first_name} #{student.second_name}" %></p>
-  <p>House: <%=  "#{student.house}" %></p>
+  <p>House: <%=  "#{student.house.name}" %></p>
   <p>Age: <%=  "#{student.age}" %></p>
 
   <p><a href="/hogwarts/<%= student.id %>">Show student detail</a></p>
