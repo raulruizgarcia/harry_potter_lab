@@ -9,7 +9,17 @@ get '/hogwarts' do
   erb(:index)
 end
 
+get '/hogwarts/new' do
+  erb(:new)
+end
+
 get '/hogwarts/:id' do
   @student = Student.find(params[:id])
   erb(:show)
+end
+
+post '/hogwarts' do
+  @student = Student.new(params)
+  @student.save
+  erb(:create)
 end
