@@ -1,14 +1,23 @@
-<p>Click <a href="/hogwarts/new"> to create a new
+<h1>Welcome to Hogwarts student registration system (HSRS)</h1>
 
-<% for student in @students do  %>
+<div class=student_info>
 
- student</a></p>
+  <% for student in @students do  %>
 
-  <p>Student name: <%=  "#{student.first_name} #{student.second_name}" %></p>
-  <p>House: <%=  "#{student.house.name}" %></p>
-  <p>Age: <%=  "#{student.age}" %></p>
+    <p>Student name: <%=  "#{student.first_name} #{student.second_name}" %></p>
+    <p>House: <%=  "#{student.house.name}" %></p>
+    <p>Age: <%=  "#{student.age}" %></p>
 
-  <p><a href="/hogwarts/<%= student.id %>">Show student detail</a></p>
-  <hr>
+    <p><a href="/hogwarts/<%= student.id %>">Show student detail</a></p>
+    <img src="<%= student.house.logo %>" alt="">
+    <hr>
 
-<% end %>
+  <% end %>
+
+  <footer>
+
+    <img id= "footer-image" src="/footer.jpg" alt="">
+
+  </footer>
+
+</div>

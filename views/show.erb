@@ -4,5 +4,21 @@
 <p>House: <%=  "#{@student.house.name}" %></p>
 <p>Age: <%=  "#{@student.age}" %></p>
 
-<p><a href="/hogwarts">Click here to go back to the student list</a></p>
+<form action="/hogwarts/<%= @student.id %>/delete" method="post">
+  <p>
+    <input type="submit" value="Delete">
+  </p>
+</form>
+
+<img src="<%= @student.house.logo %>" alt="">
+
+<form action="/hogwarts/<%= @student.id %>/edit" method="get">
+  <p>
+    <input type="submit" value="Edit">
+  </p>
+</form>
+
+<p>
+  <a href="/hogwarts">Click here to go back to the student list</a>
+</p>
 <hr>

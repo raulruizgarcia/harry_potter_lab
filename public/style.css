@@ -1,0 +1,40 @@
+body {
+  background-image: url("/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: sans-serif;
+  text-align: center;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin: 20px;
+  padding: 20px;
+}
+
+p {
+
+}
+
+
+img {
+  height: 200px;
+  width: auto;
+}
+
+#footer-image {
+  height: auto;
+  width: cover;
+}
+
+a:visited {
+    color: pink;
+}
+
+a{
+  color: red;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+}

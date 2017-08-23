@@ -24,3 +24,20 @@ post '/hogwarts' do
   @student.save
   erb(:create)
 end
+
+post '/hogwarts/:id/delete' do
+  student = Student.find(params['id'])
+  student.delete
+  redirect to '/hogwarts'
+end
+
+get '/hogwarts/:id/edit' do
+  @student = Student.find(params['id'])
+  erb(:edit)
+end
+
+post '/hogwarts/:id' do
+  @student = Student.new(params)
+  @student.update()
+  redirect to "/hogwarts/#{@student.id}"
+end

@@ -1,0 +1,25 @@
+<form action="/hogwarts/<%= @student.id %>" method="POST">
+
+  <label for="first-name-field">First name:</label>
+  <input type="text" name="first_name" id="first-name-field" value=<%= @student.first_name %>>
+
+  <label for="second-name-field">Second name:</label>
+  <input type="text" name="second_name" id="second-name-field" value=<%= @student.second_name %>>
+
+  <label for="house-select">House:</label>
+  <select name="house_id" id="house-select">
+
+  <% for house in House.all do %>
+    <option <%= 'selected' if house.id == @student.house_id %>
+    value= <%=house.id  %>><%= house.name %></option>
+
+
+  <% end %>
+  </select>
+
+  <label for="age-field">Age:</label>
+  <input type="number" name="age" id="age-field" value=<%= @student.age %>>
+
+  <input type="submit" value="Update student details">
+
+</form>

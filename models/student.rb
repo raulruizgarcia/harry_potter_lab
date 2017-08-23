@@ -60,7 +60,25 @@ attr_accessor :first_name, :second_name, :house_id, :age
     '
     values = [@house_id]
     result = SqlRunner.run(sql, values)
-    return House.new(result[0])  
+    return House.new(result[0])
+  end
+
+  def delete()
+    sql= '
+      DELETE FROM students
+      WHERE id = $1;
+    '
+    SqlRunner.run(sql, [@id])
+  end
+
+  def update()
+    sql='
+      UPDATE students
+      SET first_name = $1, second_name = $2, house_id = $3, age =$4
+      WHERE id = $5;
+    '
+    values = [@first_name, @second_name, @house_id, @age, @id]
+    SqlRunner.run(sql, values)
   end
 
 

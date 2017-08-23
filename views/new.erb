@@ -1,4 +1,4 @@
-<h1>NEW FORM</h1>
+<h1>New students registration site</h1>
 
 <form action="/hogwarts" method="post">
 
@@ -14,7 +14,6 @@
   <select name="house_id" id="house-select">
 
   <% for house in House.all do %>
-
     <option value= <%=house.id  %>><%= house.name %></option>
 
 
