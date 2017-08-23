@@ -1,0 +1,9 @@
+
+<% for student in @students do  %>
+
+  <p>Student name:<%=  "#{student.first_name} #{student.second_name}" %></p>
+  <p>House:<%=  "#{student.house}" %></p>
+  <p>Age:<%=  "#{student.age}" %></p>
+  <hr>
+
+<% end %>
